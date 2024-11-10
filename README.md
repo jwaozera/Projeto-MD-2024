@@ -50,7 +50,7 @@ Este projeto implementa um sistema de criptografia RSA, utilizando uma interface
 
 ## OBSERVAÇÕES
 
-É importante manter as pastas backend/frontend na pasta projeto como também os arquivos como o executavel na pasta backend junto de api.js e os arquivos html na pasta frontend caso contrario pode ser necessário alterções nessas linhas de código.
+É importante manter as pastas backend e frontend dentro de uma pasta principal do projeto. O arquivo executável **RSA.exe** e o **api.js** devem permanecer na pasta backend, e os arquivos HTML devem ficar na pasta frontend. Caso contrário, será necessário fazer ajustes nas referências de caminho no código.
 ![image](https://github.com/user-attachments/assets/a9cbbc78-b64e-4382-a2b7-b3ce9926b28c)
 
 ## TESTES E USO
