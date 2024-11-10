@@ -29,24 +29,34 @@ Este projeto implementa um sistema de criptografia RSA, utilizando uma interface
 
 ### Passos para Instalação
 
-1. Clone o repositório:
+1. Clone o repositório ou baixe a última versão do código-fonte em releases:
+ https://github.com/jwaozera/Projeto-MD-2024/releases
    ```bash
    git clone https://github.com/jwaozera/Projeto-MD-2024.git
    cd Projeto-MD-2024
-2. Após baixar e instalar o node.js instale o express
+3. Após baixar e instalar o node.js instale o express
    ```bash
-     npm install express
+   npm install express
 
-3. Compile o código em C (CERTIFIQUE-SE DE TER BAIXADO E INSTALADO ANTERIORMENTE O GMP)
+4. Compile o código em C (CERTIFIQUE-SE DE TER BAIXADO E INSTALADO ANTERIORMENTE O GMP)
    ```bash
    gcc backend/RSA.c -o backend/RSA -lgmp
 
-4. Inicie o servidor.
+5. Inicie o servidor.
    ```bash
    node backend/api.js
 
-5. O servidor estará disponível em http://localhost:3001
+6. O servidor estará disponível em http://localhost:3001
 
+## ERROS COMUNS
+
+1. ```bash
+   npm : O arquivo C:\Program Files\nodejs\npm.ps1 não pode ser carregado porque a execução de scripts foi desabilitada neste sistema. 
+2. Altere a Política de Execução
+Para permitir a execução de scripts, use o seguinte comando:
+   ```bash
+   Set-ExecutionPolicy RemoteSigned
+RemoteSigned: Permite a execução de scripts locais.
 
 ## OBSERVAÇÕES
 
@@ -55,7 +65,9 @@ Este projeto implementa um sistema de criptografia RSA, utilizando uma interface
 
 ## TESTES E USO
 
-Se o objetivo é apenas para testes basta baixa-lo em releases ou clonar o repositório que vem com um executável já compilado do código RSA.c, no entanto ainda é necessário ter os pré-requisitos como a biblitoeca GMP, node e a depedência express instalados corretamente.
+Se o objetivo for apenas realizar testes, você pode baixar o executável pré-compilado disponível em releases ou clonar o repositório que já inclui o código compilado do RSA.c. No entanto, é necessário garantir que os pré-requisitos, como a biblioteca GMP, o Node.js e a dependência express, estejam corretamente instalados.
+
+
 
 ## LIMITAÇÕES DO MÉTODO DE CRIPTOGRAFIA RSA
 
@@ -89,9 +101,22 @@ A segurança do RSA reside na suposição de que fatorar o produto de dois núme
 3. Ataques de canal lateral: Exploração de informações adicionais, como tempo de resposta ou consumo de energia, para deduzir a chave privada.
 4. Problemas de implementação: Erros na implementação do algoritmo podem levar a vulnerabilidades.
 
-### CONCLUSÃO
+### CONCLUSÃO E CONSIDERAÇÕSE FINAIS
 
 O RSA é um algoritmo robusto e frequentemente usado, contudo, não está livre de ataques. A seleção do tamanho da chave e a execução adequada do algoritmo são fundamentais para assegurar a segurança. Conforme a tecnologia se desenvolve, torna-se essencial seguir as mais recentes pesquisas e orientações de segurança para assegurar a proteção dos dados.
+
+QUALQUER DÚVIDA ENTRE EM CONTATO:
+
+jesm@ic.ufal.br
+
+jgaln@ic.ufal.br
+
+jsml@ic.ufal.br
+
+jvdn@ic.ufal.br
+
+gasf@ic.ufal.br
+
 
 ## REFERÊNCIAS
 
