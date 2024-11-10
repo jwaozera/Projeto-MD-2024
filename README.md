@@ -7,7 +7,7 @@ Este projeto implementa um sistema de criptografia RSA, utilizando uma interface
 - **Geração de Chaves**: Gera uma chave pública RSA a partir de dois números primos e um expoente.
 - **Encriptação de Mensagens**: Encripta mensagens utilizando uma chave pública e um expoente fornecidos.
 - **Decriptação de Mensagens**: Decripta mensagens criptografadas utilizando os números primos e expoente originais.
-- **Salvamento das Mensagens**: Salva, no diretório de execução do programa, um arquivo txt com a chave pública, chave privada, mensagem encriptada e mensagem desencriptada.
+- **Salvamento automático das Mensagens**: Salva, no diretório de execução do programa, um arquivo txt com a chave pública, chave privada, mensagem encriptada e mensagem desencriptada.
 
 ## Estrutura do Projeto
 
