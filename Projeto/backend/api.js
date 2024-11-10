@@ -1,14 +1,13 @@
 // api.js
 const express = require("express");
-// const bodyParser = require("body-parser");
 const { execFile } = require("child_process");
 const path = require("path");
 const app = express();
 
 app.use(express.json());
-const file = path.join(__dirname, 'RSA');
+const file = path.join(__dirname, 'RSA'); // Procura o arquivo 'RSA.exe' na pasta 
 
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, '../frontend')));  // Procura os arquivo HTML na pasta frontend
 
 // gerar chave
 app.post("/generate_key", (req, res) => {
