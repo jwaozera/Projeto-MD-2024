@@ -93,7 +93,7 @@ A segurança do RSA reside na suposição de que fatorar o produto de dois núme
 
 O RSA é um algoritmo robusto e frequentemente usado, contudo, não está livre de ataques. A seleção do tamanho da chave e a execução adequada do algoritmo são fundamentais para assegurar a segurança. Conforme a tecnologia se desenvolve, torna-se essencial seguir as mais recentes pesquisas e orientações de segurança para assegurar a proteção dos dados.
 
-### REFERÊNCIAS
+## REFERÊNCIAS
 
 JONSSON, Fredrik; TORNKVIST, Martin. RSA authentication in Internet of Things: technical limitations and industry expectations. Technical limitations and industry expectations. 2017. Disponível em: https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1112039&dswid=-2151. Acesso em: 02 out. 2024.
 
