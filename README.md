@@ -35,11 +35,11 @@ Este projeto implementa um sistema de criptografia RSA, utilizando uma interface
    cd Projeto-MD-2024
 2. Após baixar e instalar o node.js instale o express
    ```bash
-     node install express
+     npm install express
 
 3. Compile o código em C (CERTIFIQUE-SE DE TER BAIXADO E INSTALADO ANTERIORMENTE O GMP)
    ```bash
-   gcc RSA.c -o RSA -lgmp
+   gcc backend/RSA.c -o backend/RSA -lgmp
 
 4. Inicie o servidor.
    ```bash
@@ -55,7 +55,7 @@ Este projeto implementa um sistema de criptografia RSA, utilizando uma interface
 
 ## TESTES E USO
 
-Se o objetivo é apenas para testes basta baixa-lo em releases ou clonar o repositório que vem com um executável já compilado do código RSA.c, no entanto ainda é necessário ter o node e a depedência express para iniciar o servidor.
+Se o objetivo é apenas para testes basta baixa-lo em releases ou clonar o repositório que vem com um executável já compilado do código RSA.c, no entanto ainda é necessário ter os pré-requisitos como a biblitoeca GMP, node e a depedência express instalados corretamente.
 
 
 
