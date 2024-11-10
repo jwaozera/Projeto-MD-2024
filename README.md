@@ -7,6 +7,7 @@ Este projeto implementa um sistema de criptografia RSA, utilizando uma interface
 - **Geração de Chaves**: Gera uma chave pública RSA a partir de dois números primos e um expoente.
 - **Encriptação de Mensagens**: Encripta mensagens utilizando uma chave pública e um expoente fornecidos.
 - **Decriptação de Mensagens**: Decripta mensagens criptografadas utilizando os números primos e expoente originais.
+- **Salvamento das Mensagens**: Salva, no diretório de execução do programa, um arquivo txt com a chave pública, chave privada, mensagem encriptada e mensagem desencriptada.
 
 ## Estrutura do Projeto
 
@@ -49,7 +50,7 @@ Este projeto implementa um sistema de criptografia RSA, utilizando uma interface
 
 ## OBSERVAÇÕES
 
-É importante manter os arquivos como o executavel na pasta backend junto de api.js e os arquivos html na pasta frontend caso contrario pode ser necessário alterar essa linha de código.
+É importante manter as pastas backend/frontend na pasta projeto como também os arquivos como o executavel na pasta backend junto de api.js e os arquivos html na pasta frontend caso contrario pode ser necessário alterções nessas linhas de código.
 ![image](https://github.com/user-attachments/assets/a9cbbc78-b64e-4382-a2b7-b3ce9926b28c)
 
 ## TESTES E USO
