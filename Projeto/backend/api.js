@@ -1,11 +1,11 @@
 // api.js
 const express = require("express");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const { execFile } = require("child_process");
 const path = require("path");
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json());
 const file = path.join(__dirname, 'RSA');
 
 app.use(express.static(path.join(__dirname, '../frontend')));
