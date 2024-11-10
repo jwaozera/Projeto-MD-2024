@@ -32,3 +32,29 @@ Este projeto implementa um sistema de criptografia RSA, utilizando uma interface
    ```bash
    git clone https://github.com/jwaozera/Projeto-MD-2024.git
    cd Projeto-MD-2024
+2. Após baixar e instalar o node.js instale o express
+   ```bash
+     node install express
+
+3. Compile o código em C (CERTIFIQUE-SE DE TER BAIXADO E INSTALADO ANTERIORMENTE O GMP)
+   ```bash
+   gcc RSA.c -o RSA -lgmp
+
+4. Inicie o servidor.
+   ```bash
+   node backend/api.js
+
+5. O servidor estará disponível em http://localhost:3001
+
+
+## OBSERVAÇÕES
+
+É importante manter os arquivos como o executavel na pasta backend junto de api.js e os arquivos html na pasta frontend caso contrario pode ser necessário alterar essa linha de código.
+![image](https://github.com/user-attachments/assets/a9cbbc78-b64e-4382-a2b7-b3ce9926b28c)
+
+## TESTES E USO
+
+Se o objetivo é apenas para testes basta baixa-lo em releases ou clonar o repositório que vem com um executável já compilado do código RSA.c, no entanto ainda é necessário ter o node e a depedência express para iniciar o servidor.
+
+
+
