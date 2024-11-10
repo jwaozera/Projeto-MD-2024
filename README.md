@@ -1,24 +1,34 @@
-# Projeto-MD-2024
+# Projeto de Criptografia RSA
 
-# Criptografia RSA com API em Node.js
-
-Este projeto é uma implementação de criptografia RSA em C, com uma interface de API em Node.js. A criptografia RSA é usada para encriptação e desencriptação de mensagens de forma segura, utilizando chaves públicas e privadas.
+Este projeto implementa um sistema de criptografia RSA, utilizando uma interface de API em Node.js para facilitar operações de geração de chaves, encriptação e decriptação de mensagens. A lógica de criptografia é escrita em C, utilizando a biblioteca GMP para manipulação de números grandes.
 
 ## Funcionalidades
 
-- **Geração de chave pública** a partir de dois números primos e um expoente.
-- **Encriptação de mensagens** usando uma chave pública e expoente.
-- **Desencriptação de mensagens** com as chaves privadas e expoente corretos.
+- **Geração de Chaves**: Gera uma chave pública RSA a partir de dois números primos e um expoente.
+- **Encriptação de Mensagens**: Encripta mensagens utilizando uma chave pública e um expoente fornecidos.
+- **Decriptação de Mensagens**: Decripta mensagens criptografadas utilizando os números primos e expoente originais.
 
-## Pré-requisitos
+## Estrutura do Projeto
 
-- **Biblioteca GMP** (GNU Multiple Precision Arithmetic Library) para operações matemáticas em C.
-- **Node.js** para executar a API.
-- **Compilador C** como `gcc`.
+- **api.js**: Servidor Node.js que expõe uma API para interagir com a criptografia RSA.
+- **RSA.c**: Implementação das funções de criptografia e decriptação em C.
+- **frontend**: Diretório que pode conter o frontend (não incluído neste projeto).
+
+## Tecnologias Utilizadas
+
+- **Node.js** e **Express**: Para criação da API e comunicação com o código C.
+- **GMP (GNU Multiple Precision Arithmetic Library)**: Biblioteca em C para manipulação de números grandes usados na criptografia RSA.
 
 ## Instalação
 
-1. **Clone o repositório:**
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org) (versão 14 ou superior).
+- [GMP Library](https://gmplib.org) A biblioteca GMP é necessária para manipulação de números grandes e precisa estar instalada no sistema antes da compilação do código em C.
+
+### Passos para Instalação
+
+1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/Projeto-MD-2024.git
+   git clone https://github.com/jwaozera/Projeto-MD-2024.git
    cd Projeto-MD-2024
