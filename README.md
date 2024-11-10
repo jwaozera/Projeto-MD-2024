@@ -57,5 +57,50 @@ Este projeto implementa um sistema de criptografia RSA, utilizando uma interface
 
 Se o objetivo é apenas para testes basta baixa-lo em releases ou clonar o repositório que vem com um executável já compilado do código RSA.c, no entanto ainda é necessário ter os pré-requisitos como a biblitoeca GMP, node e a depedência express instalados corretamente.
 
+## LIMITAÇÕES DO MÉTODO DE CRIPTOGRAFIA RSA
 
+### COMO FUNCIONA
 
+O RSA se baseia na dificuldade de fatorar números inteiros grandes. Uma chave pública é usada para criptografar mensagens, enquanto uma chave privada correspondente é usada para descriptografá-las.
+A segurança do RSA reside na suposição de que fatorar o produto de dois números primos grandes é computacionalmente inviável.
+
+### LIMITAÇÕES MATEMÁTICAS
+
+1. Fatoração de Números Inteiros: A segurança do RSA se baseia na dificuldade de fatorar grandes números inteiros. Embora seja computacionalmente inviável para números primos muito grandes, o desenvolvimento de novos algoritmos de fatoração pode comprometer a segurança de chaves menores.
+2. Ordem de um Grupo: A eficiência do RSA depende da escolha adequada de um grupo multiplicativo. Se a ordem desse grupo não for bem escolhida, ataques podem ser mais eficazes.
+3. Ataques de Texto Cifrado Escolhido: Esses ataques exploram a estrutura matemática do RSA para recuperar a chave privada, especialmente se o atacante puder escolher os textos cifrados a serem decifrados.
+
+### LIMITAÇÕES COMPUTACIONAIS
+
+1. Aumento da Potência Computacional: O avanço constante da tecnologia computacional permite quebrar chaves RSA menores em menos tempo.
+2. Algoritmos Quânticos: A computação quântica representa uma ameaça significativa para o RSA. Algoritmos como o de Shor podem fatorar números inteiros grandes em tempo polinomial, tornando as chaves RSA atuais vulneráveis.
+3. Complexidade Computacional dos Cálculos: A criptografia RSA envolve cálculos complexos, especialmente para chaves longas. Isso pode limitar o desempenho de sistemas com recursos computacionais limitados.
+
+### TAMANHO DAS CHAVES E AS LIMITAÇÕES
+
+1. Chaves Pequenas: Mais vulneráveis a ataques de força bruta e algoritmos de fatoração clássicos.
+2. Chaves Grandes: Mais seguras contra ataques tradicionais, mas exigem maior poder computacional para as operações de criptografia e descriptografia.
+3. Tamanho Ideal: O tamanho ideal da chave varia dependendo do nível de segurança exigido e da tecnologia disponível.
+
+### ATAQUES E VULNERABILIDADES
+
+1. Ataques por força bruta: Embora teoricamente possível, a complexidade computacional é proibitiva para chaves RSA suficientemente grandes.
+2. Ataques de fatoração: Algoritmos de fatoração aprimorados podem comprometer a segurança do RSA para chaves menores.
+3. Ataques de canal lateral: Exploração de informações adicionais, como tempo de resposta ou consumo de energia, para deduzir a chave privada.
+4. Problemas de implementação: Erros na implementação do algoritmo podem levar a vulnerabilidades.
+
+### CONCLUSÃO
+
+O RSA é um algoritmo robusto e frequentemente usado, contudo, não está livre de ataques. A seleção do tamanho da chave e a execução adequada do algoritmo são fundamentais para assegurar a segurança. Conforme a tecnologia se desenvolve, torna-se essencial seguir as mais recentes pesquisas e orientações de segurança para assegurar a proteção dos dados.
+
+### REFERÊNCIAS
+
+JONSSON, Fredrik; TORNKVIST, Martin. RSA authentication in Internet of Things: technical limitations and industry expectations. Technical limitations and industry expectations. 2017. Disponível em: https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1112039&dswid=-2151. Acesso em: 02 out. 2024.
+
+RSA COMUNNITY (comp.). Políticas de acesso. 2023. Disponível em: https://community.rsa.com/s/article/Access-Policies-0f565e64. Acesso em: 02 out. 2024.
+
+IBM. Tamanho da chave RSA mínima. 2024. Disponível em: https://www.ibm.com/docs/pt-br/i/7.5?topic=settings-minimum-rsa-key-size. Acesso em: 02 out. 2024.
+
+ANDRADE, Rafael Santos; SILVA, Fernando dos Santos. ALGORITMO DE CRIPTOGRAFIA RSA: análise entre a segurança e velocidade. análise entre a segurança e velocidade. 2012. Disponível em: https://periodicos.unemat.br. Acesso em: 02 out. 2024.
+
+BARBEDO, Inês. O Sistema Criptográfico RSA: ataques e variantes. Ataques e Variantes. 2003. Disponível em: https://bibliotecadigital.ipb.pt. Acesso em: 02 out. 2024.
