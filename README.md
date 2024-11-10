@@ -12,7 +12,7 @@ Este projeto implementa um sistema de criptografia RSA, utilizando uma interface
 
 - **api.js**: Servidor Node.js que expõe uma API para interagir com a criptografia RSA.
 - **RSA.c**: Implementação das funções de criptografia e decriptação em C.
-- **frontend**: Diretório que pode conter o frontend (não incluído neste projeto).
+- **Front-end**: Feito em HTML e javascript.
 
 ## Tecnologias Utilizadas
 
