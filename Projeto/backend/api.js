@@ -1,13 +1,14 @@
 // api.js
 const express = require("express");
+//const bodyParser = require("body-parser");
 const { execFile } = require("child_process");
 const path = require("path");
 const app = express();
 
 app.use(express.json());
-const file = path.join(__dirname, 'RSA'); // Procura o arquivo 'RSA.exe' na pasta 
 
-app.use(express.static(path.join(__dirname, '../frontend')));  // Procura os arquivo HTML na pasta frontend
+const file = path.join(__dirname, 'RSA'); // Procura o executavel na pasta
+app.use(express.static(path.join(__dirname, '../frontend'))); //Procura os arquivos html na pasta frontend
 
 // gerar chave
 app.post("/generate_key", (req, res) => {
@@ -39,17 +40,23 @@ app.post("/encrypt", (req, res) => {
     });
 });
 
-// desencriptar mensagem
+
 app.post("/decrypt", (req, res) => {
     const { message, firstPrime, secondPrime, exponent } = req.body;
-    execFile(file, ["decrypt", message, firstPrime, secondPrime, exponent], (error, stdout, stderr) => {
+
+    const child = execFile(file, ["decrypt", firstPrime, secondPrime, exponent], (error, stdout, stderr) => {
         if (error || stderr) {
-            const message = stderr || error.message || "An unknown error occurred.";
-            return res.status(400).json({ error: message });
+            const errorMessage = stderr || error.message || "An unknown error occurred.";
+            return res.status(400).json({ error: errorMessage });
         }
         res.send(stdout);
     });
+
+    // stdin child process
+    child.stdin.write(message);
+    child.stdin.end();
 });
+
 
 // server
 const PORT = 3001;
